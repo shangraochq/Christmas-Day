@@ -4,8 +4,8 @@
 	'use strict';
     var music = document.getElementById('music');
     setTimeout(() => {
-        music.setAttribute('src', './img/Christmas.mp3')
-    }, 1000);
+        music.setAttribute('src', 'https://shangraochq.github.io/Christmas-Day/img/Christmas.mp3')
+    }, 0);
     var picture = document.getElementById('picture');
     picture.addEventListener('click', playMusic);
     function playMusic() {
