@@ -3,13 +3,22 @@
 
 	'use strict';
     var music = document.getElementById('music');
-    setTimeout(() => {
-        music.setAttribute('src', 'https://shangraochq.github.io/Christmas-Day/img/Christmas.mp3')
-    }, 0);
+    window.isPaly = false;
+    // setTimeout(() => {
+    //     music.setAttribute('src', 'https://shangraochq.github.io/Christmas-Day/img/Christmas.mp3')
+    // }, 0);
     var picture = document.getElementById('picture');
     picture.addEventListener('click', playMusic);
     function playMusic() {
-        
+        if (window.isPaly) {
+            window.isPaly = false;
+            music.pause();
+            picture.setAttribute('class', 'picture');
+        } else {
+            window.isPaly = true;
+            music.play();
+            picture.setAttribute('class', 'picture open');
+        }
     }
 	var merrywrap = document.getElementById( 'merrywrap' ),
 		box = merrywrap.querySelector( '.giftbox' ),

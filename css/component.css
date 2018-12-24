@@ -26,10 +26,31 @@ h1 span {
 	transform: skew(-20deg);
 }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .picture {
-    position: absolute;
-    width: 10%;
+    width: 15%;
+    max-width: 100px;
     border-radius: 100%;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 10000;
+}
+
+.open {
+    animation: rotate;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .merrywrap {
